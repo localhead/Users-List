@@ -6,11 +6,6 @@ import NewUser from "./components/NewUser";
 import ModalWindow from "./components/ModalWindow";
 import UsersList from "./components/UsersList";
 
-const isHidden = {
-  /* 1 - add hidden */
-  value: 1,
-};
-
 const dataINIT = [
   {
     id: Math.random(),
@@ -29,16 +24,10 @@ const dataINIT = [
   },
 ];
 
-const dataINIT1 = [
-  {
-    id: Math.random(),
-    name: "mark",
-    age: 47,
-  },
-];
-
 function App() {
   const [data, setData] = useState(dataINIT);
+  const [statusG, setStatusG] = useState(1);
+  const [description, setDecription] = useState("");
 
   const newUserAdded = (formData) => {
     setData((prevData) => {
@@ -53,12 +42,32 @@ function App() {
     setData(theData);
   };
 
-  console.log(data);
+  const isHiddenModal = (value) => {
+    console.log(value);
+    if (value === 0) setStatusG(0);
+  };
+
+  const closeModal = () => {
+    setStatusG(1);
+  };
+
+  const warningText = (text) => {
+    //console.log(text);
+    setDecription(text);
+  };
 
   return (
     <div className="App">
-      <NewUser newUserData={newUserAdded}></NewUser>
-      <ModalWindow data={isHidden}></ModalWindow>
+      <NewUser
+        newUserData={newUserAdded}
+        statusHidden={isHiddenModal}
+        textSaver={warningText}
+      ></NewUser>
+      <ModalWindow
+        status={statusG}
+        updatedModal={closeModal}
+        textToShow={description}
+      ></ModalWindow>
       <UsersList data={data} userDeletedData={removeUser}></UsersList>
     </div>
   );

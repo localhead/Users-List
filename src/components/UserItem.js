@@ -1,11 +1,11 @@
 import styles from "./UserItem.module.css";
 
 const UserItem = (props) => {
-  console.log(props);
+  //console.log(props);
 
   const deleteHandler = (event) => {
     event.preventDefault();
-    console.log(props.name);
+    //console.log(props.name);
     props.deleteUser(props.id);
   };
 

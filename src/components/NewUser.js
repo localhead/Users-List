@@ -9,6 +9,20 @@ const NewUser = (props) => {
   const submitEventHandler = (event) => {
     event.preventDefault();
 
+    if (name === "" || age === "") {
+      setName("");
+      setAge("");
+      props.textSaver("Please enter a valid name and age (non-empty values)");
+      return props.statusHidden(0);
+    }
+
+    if (Number(age) <= 0) {
+      setName("");
+      setAge("");
+      props.textSaver("Please enter a valid age (>0)");
+      return props.statusHidden(0);
+    }
+
     const newUser = {
       name: name,
       age: age,
@@ -17,7 +31,7 @@ const NewUser = (props) => {
 
     setName("");
     setAge("");
-
+    props.statusHidden(1);
     props.newUserData(newUser);
   };
 
@@ -33,21 +47,11 @@ const NewUser = (props) => {
     <form className={styles["new-user-form"]} onSubmit={submitEventHandler}>
       <div className={styles["new-user-form__name"]}>
         <label>Name</label>
-        <input
-          type="text"
-          value={name}
-          onChange={changeNameHandler}
-          required
-        ></input>
+        <input type="text" value={name} onChange={changeNameHandler}></input>
       </div>
       <div className={styles["new-user-form__age"]}>
         <label>Age</label>
-        <input
-          type="number"
-          value={age}
-          onChange={changeAgeHandler}
-          required
-        ></input>
+        <input type="number" value={age} onChange={changeAgeHandler}></input>
       </div>
       <button type="submit" className={styles["new-user-from__btn"]}>
         Add User
