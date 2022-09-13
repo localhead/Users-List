@@ -1,0 +1,29 @@
+.modal {
+  transition: all 0.5s;
+  top: 50%;
+  left: 50%;
+  z-index: 1000;
+  position: fixed;
+  max-width: 800px;
+  max-height: 800px;
+  background-color: #ffeacb;
+  transform: translate(-50%, -50%);
+  padding: 70px 85px 30px 85px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  transition: all 0.5s;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}

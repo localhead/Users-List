@@ -1,0 +1,37 @@
+.new-user-form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding-top: 25px;
+  font-family: "Poppins", sans-serif;
+}
+
+.new-user-form__name {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+}
+
+.new-user-form__age {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.new-user-from__btn {
+  margin-top: 25px;
+  width: 150px;
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(255, 141, 115);
+  border: 1px solid rgb(113, 113, 113);
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.new-user-from__btn:hover {
+  cursor: pointer;
+  color: aliceblue;
+  background-color: rgb(43, 43, 43);
+}
