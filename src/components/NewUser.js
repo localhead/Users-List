@@ -26,7 +26,7 @@ const NewUser = (props) => {
     const newUser = {
       name: name,
       age: age,
-      id: Math.random(),
+      id: Math.random().toFixed(10),
     };
 
     setName("");

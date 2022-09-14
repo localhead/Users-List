@@ -1,0 +1,44 @@
+.users-list-titles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  align-items: center;
+  width: 500px;
+  border: 2px solid rgb(175, 175, 175);
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: rgb(59, 59, 59);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-left: auto;
+}
+
+.not-found {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  align-items: center;
+  width: 500px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  padding-left: 370px;
+  font-size: 22px;
+  color: rgb(139, 139, 139);
+}
+
+.users-list-titles__id {
+  padding-left: 15px;
+  padding-right: 75px;
+}
+
+.users-list-titles__name {
+  padding-right: 35px;
+  padding-left: 55px;
+}
+
+.users-list-titles__age {
+  padding-right: 180px;
+}

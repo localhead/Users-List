@@ -13,10 +13,15 @@ const UserItem = (props) => {
     <div className={styles["users-item-content"]}>
       <div className={styles["user-item-inner"]}>
         {" "}
-        <div>User ID {props.id}</div>
-        <h2>{props.name}</h2>
-        <h2>{props.age}</h2>
-        <button onClick={deleteHandler}>Delete</button>
+        <div className={styles["user-item-inner__id"]}>{props.id}</div>
+        <div className={styles["user-item-inner__name"]}>{props.name}</div>
+        <div className={styles["user-item-inner__age"]}>{props.age}</div>
+        <button
+          className={styles["user-item-inner__button"]}
+          onClick={deleteHandler}
+        >
+          Delete
+        </button>
       </div>
     </div>
   );

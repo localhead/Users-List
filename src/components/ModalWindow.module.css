@@ -1,14 +1,31 @@
 .modal {
   transition: all 0.5s;
-  top: 50%;
+  top: 25%;
   left: 50%;
   z-index: 1000;
   position: fixed;
   max-width: 800px;
   max-height: 800px;
-  background-color: #ffeacb;
+  background-color: #e6e6e6;
   transform: translate(-50%, -50%);
-  padding: 70px 85px 30px 85px;
+  padding: 20px 85px 30px 45px;
+  font-family: "Poppins", sans-serif;
+  border-radius: 15px;
+}
+
+.modal__button {
+  font-family: "Poppins", sans-serif;
+  padding: 5px 45px;
+  margin-top: 25px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid rgb(71, 71, 71);
+}
+
+.modal__button:hover {
+  cursor: pointer;
+  color: #e6e6e6;
+  background-color: rgb(71, 71, 71);
 }
 
 .overlay {

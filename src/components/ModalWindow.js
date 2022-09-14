@@ -23,7 +23,12 @@ const ModalWindow = (props) => {
       >
         <h2>Invalid Output</h2>
         <p>{props.textToShow}</p>
-        <button onClick={CloseWindowHandler}>Okay</button>
+        <button
+          onClick={CloseWindowHandler}
+          className={styles["modal__button"]}
+        >
+          Okay
+        </button>
       </div>
       <div
         onClick={closeOverlayFn}

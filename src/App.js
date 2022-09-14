@@ -8,17 +8,17 @@ import UsersList from "./components/UsersList";
 
 const dataINIT = [
   {
-    id: Math.random(),
+    id: Math.random().toFixed(10),
     name: "Bill",
     age: 34,
   },
   {
-    id: Math.random(),
+    id: Math.random().toFixed(10),
     name: "Helen",
     age: 18,
   },
   {
-    id: Math.random(),
+    id: Math.random().toFixed(10),
     name: "Clark",
     age: 28,
   },
